@@ -6,7 +6,10 @@ var instance = axios.create({
 var WeatherAPI = (function() {
 
     var getInfo = function() {
-        var main = document.getElementsByTagName("main")[0];
+        var main = document.getElementById("info");
+        while (main.childNodes.length > 0) {
+            main.removeChild(main.firstChild);
+        }
         var input = document.getElementById("input");
         instance.get(input.value)
                 .then(function (response) {
