@@ -21,21 +21,19 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
+          <h3 class="masthead-brand">Weather Information</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Home</a>
-            <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Features</a>
-            <a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Contact</a>
+            <a class="nav-link active" href="">Current Weather</a>
+            <!--<a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Features</a>-->
+            <!--<a class="nav-link" href="https://getbootstrap.com/docs/4.1/examples/cover/#">Contact</a>-->
           </nav>
         </div>
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-          <a href="https://getbootstrap.com/docs/4.1/examples/cover/#" class="btn btn-lg btn-secondary">Learn more</a>
-        </p>
+        <p>City:</p>
+        <input id="input">
+        <button onclick="WeatherAPI.getInfo()">Search</button>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -49,10 +47,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./css/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="./js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="./css/popper.min.js"></script>
-    <script src="./css/bootstrap.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/weatherAPI.js"></script>
   
 
 </body></html>
