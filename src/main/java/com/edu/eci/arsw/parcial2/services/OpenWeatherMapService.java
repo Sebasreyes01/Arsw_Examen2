@@ -18,6 +18,12 @@ public class OpenWeatherMapService {
     private static final String SITE = "http://api.openweathermap.org/data/2.5/weather?q=";
     private static final String ID = "&appid=1e7e8de23dd81f89d9138bb3dd802856";
 
+    /**
+     * 
+     * @param city the city to which the climate is going to be consulted.
+     * @return The information of the weather.
+     * @throws IOException 
+     */
     public String getInfo(String city) throws IOException {
 
         URL obj = new URL(SITE+city+ID);

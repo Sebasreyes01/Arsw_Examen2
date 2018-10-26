@@ -21,6 +21,11 @@ public class WeatherAPIController {
     @Autowired
     OpenWeatherMapService owms;
 
+    /**
+     * 
+     * @param city The city to which the climate is going to be consulted.
+     * @return The information of the weather.
+     */
     @RequestMapping(method = RequestMethod.GET,path = "/{city}")
     public ResponseEntity<?> handlerGetResourceWeather(@PathVariable String city) {
         try {
